@@ -15,9 +15,6 @@ public class TestApplication extends Application<TestConfiguration> {
     public void initialize(Bootstrap<TestConfiguration> bootstrap) {
         bootstrap.setConfigurationSourceProvider(
                 new SubstitutingSourceProvider(bootstrap.getConfigurationSourceProvider(),
-                        // configuring in strict mode so that env variables MUST be set (fail fast)
-                        // and enabling substitutionInVariables which allows us to use env variables recursively:
-                        //  ${SOME_KEY:-${SOME_KEY_FALLBACK}}
                         new EnvironmentVariableSubstitutor(true, false)
                 )
         );
