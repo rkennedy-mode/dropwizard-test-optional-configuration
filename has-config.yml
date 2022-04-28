@@ -1,0 +1,6 @@
+optionalConfig: "Hello, World!"
+
+server:
+  applicationConnectors:
+    - type: http
+      port: 8080

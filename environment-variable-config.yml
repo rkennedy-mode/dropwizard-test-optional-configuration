@@ -1,0 +1,6 @@
+optionalConfig: ${SOME_ENVIRONMENT_VARIABLE_NAME:-null}
+
+server:
+  applicationConnectors:
+    - type: http
+      port: 8080
